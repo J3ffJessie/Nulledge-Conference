@@ -40,7 +40,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 className="text-lg px-8"
@@ -52,7 +52,7 @@ export function HeroSection() {
                 >
                   Register Now
                 </a>
-              </Button>
+              </Button> */}
               <Button
                 asChild
                 size="lg"

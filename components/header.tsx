@@ -37,8 +37,8 @@ export function Header() {
           <Link href="#schedule" className="text-sm font-medium hover:text-primary transition-colors">
             Schedule
           </Link>
-          <Link href="#tickets" className="text-sm font-medium hover:text-primary transition-colors">
-            Tickets
+          <Link href="#cfp" className="text-sm font-medium hover:text-primary transition-colors">
+            Call for Proposals
           </Link>
         </nav>
 
@@ -55,7 +55,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Register Now
+              Register to Attend
             </a>
           </Button>
 
@@ -92,13 +92,13 @@ export function Header() {
               Schedule
             </Link>
             <Link
-              href="#tickets"
+              href="#cfp"
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Tickets
+              Call for Proposals
             </Link>
-            <Button className="w-full">Register Now</Button>
+            <Button className="w-full">Register to Attend</Button>
           </nav>
         </div>
       )}

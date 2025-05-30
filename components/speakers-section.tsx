@@ -75,23 +75,6 @@ export function SpeakersSection() {
           ))}
         </div>
       </div>
-
-      <div className="text-center mb-16 py-16">
-        <h2 className="text-2xl font-bold mb-4">Call for Proposals</h2>
-        <Button
-          asChild
-          size="lg"
-          className="text-lg px-8"
-        >
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScMoi3ZWPeSAtDEX4kX1LqkZ2N5thCUJO0AeyFbrJyX9VVlcw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Register Now
-          </a>
-        </Button>
-      </div>
     </section>
   )
 }

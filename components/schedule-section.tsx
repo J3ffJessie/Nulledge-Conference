@@ -4,13 +4,17 @@ import { Clock, MapPin } from "lucide-react"
 import { jsonLD } from "@/app/details"
 export function ScheduleSection() {
   let jsonLDevents = jsonLD.subEvents.map(function (event) {
-    let start = new Date(event.startDate).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
-    let end = new Date(event.endDate).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
+    let start = new Date(event.startDate).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit" })
+    let end = new Date(event.endDate).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit" })
+    let timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    let startUTC = new Date(event.startDate).toString();
+    let endUTC = new Date(event.endDate).toString();
     let speaker = event.performers.map(function (person) {
       return person.name
     }).join(', ');
     return {
-      time: start + ' - ' + end + ' EST',
+      time: `${start} - ${end} ${timeZone}`,
+      timeUTC: `${startUTC} - ${endUTC}`,
       title: event.description,
       speaker: speaker,
       type: event.additionalType,
@@ -61,7 +65,13 @@ export function ScheduleSection() {
                       <div className="flex flex-col md:flex-row md:items-center gap-4">
                         <div className="flex items-center gap-2 text-muted-foreground min-w-[100px]">
                           <Clock className="h-4 w-4" />
-                          <span className="font-medium">{event.time}</span>
+                          <details className="inline">
+                            <summary className="list-none text-sm">
+                              <span className="font-medium" title={event.timeUTC}>{event.time}</span>
+                            </summary>
+                            <span className="font-medium">{event.timeUTC}</span>
+                          </details>
+
                         </div>
 
                         <div className="flex-1 space-y-2">

@@ -14,30 +14,30 @@ export function Header() {
     <header className="px-4 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-		{/*<div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">*/}
-            <div>
-			<Image
+          {/*<div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">*/}
+          <div>
+            <Image
               src="/nullEDGElogo.jpg"
               alt="nullEDGE Logo"
               width={200}
               height={50}
             />
-		</div>
-		{/*<span className="font-bold text-xl">Nulledge</span>*/}
+          </div>
+          {/*<span className="font-bold text-xl">Nulledge</span>*/}
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/#about" className="text-sm font-medium hover:text-primary transition-colors">
             About
           </Link>
-          <Link href="#speakers" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/#speakers" className="text-sm font-medium hover:text-primary transition-colors">
             Speakers
           </Link>
-          <Link href="#schedule" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/#schedule" className="text-sm font-medium hover:text-primary transition-colors">
             Schedule
           </Link>
-          <Link href="#cfp" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/#cfp" className="text-sm font-medium hover:text-primary transition-colors">
             Call for Proposals
           </Link>
         </nav>
@@ -71,28 +71,28 @@ export function Header() {
         <div className="md:hidden border-t bg-background">
           <nav className="container py-4 space-y-4">
             <Link
-              href="#about"
+              href="/#about"
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
-              href="#speakers"
+              href="/#speakers"
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Speakers
             </Link>
             <Link
-              href="#schedule"
+              href="/#schedule"
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Schedule
             </Link>
             <Link
-              href="#cfp"
+              href="/#cfp"
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >

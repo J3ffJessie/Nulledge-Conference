@@ -52,7 +52,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-primary" />
-              <span>500+ Attendees</span>
+              <span>800+ Attendees</span>
             </div>
           </div>
 
